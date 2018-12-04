@@ -7,21 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A2E34D021B5E180002E2344 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2E34CF21B5E180002E2344 /* LoginScreen.swift */; };
+		6A2E34D321B5E8A7002E2344 /* Test Photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E34D221B5E8A7002E2344 /* Test Photo.jpg */; };
+		6A2E34D521B5EAC8002E2344 /* NF Messaging Login Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E34D421B5EAC8002E2344 /* NF Messaging Login Background.jpg */; };
+		6A2E34D721B5ECDF002E2344 /* NF Messaging Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E34D621B5ECDF002E2344 /* NF Messaging Title.png */; };
+		6A2E34E121B610DB002E2344 /* NF Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E34E021B610DA002E2344 /* NF Title.png */; };
+		6A2E34E321B61E52002E2344 /* Username Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E34E221B61E52002E2344 /* Username Icon.png */; };
+		6A2E34E521B61E63002E2344 /* Password Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E34E421B61E63002E2344 /* Password Icon.png */; };
+		6A2E34E721B62E33002E2344 /* ForgotPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2E34E621B62E33002E2344 /* ForgotPasswordScreen.swift */; };
+		6A2E34E921B62E54002E2344 /* CreatAccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2E34E821B62E54002E2344 /* CreatAccountScreen.swift */; };
+		6A2E34EB21B62E92002E2344 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2E34EA21B62E92002E2344 /* HomeScreen.swift */; };
+		6A2E34EF21B633E6002E2344 /* Cancel Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E34EE21B633E6002E2344 /* Cancel Icon.png */; };
+		6A2E34F121B63FF2002E2344 /* Sign In Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E34F021B63FF2002E2344 /* Sign In Title.png */; };
+		6A2E34F321B64069002E2344 /* Sign Up Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E34F221B64069002E2344 /* Sign Up Title.png */; };
+		6A2E34F721B6427A002E2344 /* Create Account Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E34F621B64279002E2344 /* Create Account Title.png */; };
+		6A2E34F921B64384002E2344 /* Forgot Password Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E34F821B64384002E2344 /* Forgot Password Title.png */; };
 		6AB631F521B5D50F00075BAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB631F421B5D50F00075BAA /* AppDelegate.swift */; };
-		6AB631F721B5D50F00075BAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB631F621B5D50F00075BAA /* ViewController.swift */; };
 		6AB631FA21B5D50F00075BAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB631F821B5D50F00075BAA /* Main.storyboard */; };
 		6AB631FC21B5D51100075BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB631FB21B5D51100075BAA /* Assets.xcassets */; };
 		6AB631FF21B5D51100075BAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB631FD21B5D51100075BAA /* LaunchScreen.storyboard */; };
+		6AB6320721B5DB2B00075BAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AB6320621B5DB2B00075BAA /* GoogleService-Info.plist */; };
+		73D760B335A15585DAC3E55B /* Pods_NF_Messaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61BF6F8AAD53A3E60E2A3A3 /* Pods_NF_Messaging.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A2E34CF21B5E180002E2344 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		6A2E34D221B5E8A7002E2344 /* Test Photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Test Photo.jpg"; sourceTree = "<group>"; };
+		6A2E34D421B5EAC8002E2344 /* NF Messaging Login Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "NF Messaging Login Background.jpg"; sourceTree = "<group>"; };
+		6A2E34D621B5ECDF002E2344 /* NF Messaging Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NF Messaging Title.png"; sourceTree = "<group>"; };
+		6A2E34E021B610DA002E2344 /* NF Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NF Title.png"; path = "../../../NF Title.png"; sourceTree = "<group>"; };
+		6A2E34E221B61E52002E2344 /* Username Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Username Icon.png"; sourceTree = "<group>"; };
+		6A2E34E421B61E63002E2344 /* Password Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Password Icon.png"; sourceTree = "<group>"; };
+		6A2E34E621B62E33002E2344 /* ForgotPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordScreen.swift; sourceTree = "<group>"; };
+		6A2E34E821B62E54002E2344 /* CreatAccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatAccountScreen.swift; sourceTree = "<group>"; };
+		6A2E34EA21B62E92002E2344 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		6A2E34EE21B633E6002E2344 /* Cancel Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cancel Icon.png"; sourceTree = "<group>"; };
+		6A2E34F021B63FF2002E2344 /* Sign In Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sign In Title.png"; sourceTree = "<group>"; };
+		6A2E34F221B64069002E2344 /* Sign Up Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sign Up Title.png"; sourceTree = "<group>"; };
+		6A2E34F621B64279002E2344 /* Create Account Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Create Account Title.png"; path = "../../../Create Account Title.png"; sourceTree = "<group>"; };
+		6A2E34F821B64384002E2344 /* Forgot Password Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Forgot Password Title.png"; sourceTree = "<group>"; };
 		6AB631F121B5D50F00075BAA /* NF Messaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NF Messaging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB631F421B5D50F00075BAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6AB631F621B5D50F00075BAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6AB631F921B5D50F00075BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AB631FB21B5D51100075BAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AB631FE21B5D51100075BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AB6320021B5D51100075BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AB6320621B5DB2B00075BAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8816DE527EF73854B129F65E /* Pods-NF Messaging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NF Messaging.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NF Messaging/Pods-NF Messaging.debug.xcconfig"; sourceTree = "<group>"; };
+		D61BF6F8AAD53A3E60E2A3A3 /* Pods_NF_Messaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NF_Messaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6F5F932B6D3A8B556525CB4 /* Pods-NF Messaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NF Messaging.release.xcconfig"; path = "Pods/Target Support Files/Pods-NF Messaging/Pods-NF Messaging.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +63,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73D760B335A15585DAC3E55B /* Pods_NF_Messaging.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A395DBE01670829FCFA84F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8816DE527EF73854B129F65E /* Pods-NF Messaging.debug.xcconfig */,
+				F6F5F932B6D3A8B556525CB4 /* Pods-NF Messaging.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2813F75B20D6270E8B2095B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D61BF6F8AAD53A3E60E2A3A3 /* Pods_NF_Messaging.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A2E34D121B5E89E002E2344 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				6A2E34EE21B633E6002E2344 /* Cancel Icon.png */,
+				6A2E34F621B64279002E2344 /* Create Account Title.png */,
+				6A2E34F221B64069002E2344 /* Sign Up Title.png */,
+				6A2E34F021B63FF2002E2344 /* Sign In Title.png */,
+				6A2E34F821B64384002E2344 /* Forgot Password Title.png */,
+				6A2E34E021B610DA002E2344 /* NF Title.png */,
+				6A2E34E421B61E63002E2344 /* Password Icon.png */,
+				6A2E34E221B61E52002E2344 /* Username Icon.png */,
+				6A2E34D221B5E8A7002E2344 /* Test Photo.jpg */,
+				6A2E34D621B5ECDF002E2344 /* NF Messaging Title.png */,
+				6A2E34D421B5EAC8002E2344 /* NF Messaging Login Background.jpg */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
 		6AB631E821B5D50F00075BAA = {
 			isa = PBXGroup;
 			children = (
 				6AB631F321B5D50F00075BAA /* NF Messaging */,
 				6AB631F221B5D50F00075BAA /* Products */,
+				1A395DBE01670829FCFA84F8 /* Pods */,
+				2813F75B20D6270E8B2095B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +127,16 @@
 			isa = PBXGroup;
 			children = (
 				6AB631F421B5D50F00075BAA /* AppDelegate.swift */,
-				6AB631F621B5D50F00075BAA /* ViewController.swift */,
+				6A2E34CF21B5E180002E2344 /* LoginScreen.swift */,
+				6A2E34E821B62E54002E2344 /* CreatAccountScreen.swift */,
+				6A2E34EA21B62E92002E2344 /* HomeScreen.swift */,
+				6A2E34E621B62E33002E2344 /* ForgotPasswordScreen.swift */,
 				6AB631F821B5D50F00075BAA /* Main.storyboard */,
 				6AB631FB21B5D51100075BAA /* Assets.xcassets */,
 				6AB631FD21B5D51100075BAA /* LaunchScreen.storyboard */,
 				6AB6320021B5D51100075BAA /* Info.plist */,
+				6AB6320621B5DB2B00075BAA /* GoogleService-Info.plist */,
+				6A2E34D121B5E89E002E2344 /* Photos */,
 			);
 			path = "NF Messaging";
 			sourceTree = "<group>";
@@ -71,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AB6320321B5D51100075BAA /* Build configuration list for PBXNativeTarget "NF Messaging" */;
 			buildPhases = (
+				EBB703796FFC83ABE8893EB4 /* [CP] Check Pods Manifest.lock */,
 				6AB631ED21B5D50F00075BAA /* Sources */,
 				6AB631EE21B5D50F00075BAA /* Frameworks */,
 				6AB631EF21B5D50F00075BAA /* Resources */,
+				39DA1FAFF6294C13784844CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,21 +201,81 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A2E34E321B61E52002E2344 /* Username Icon.png in Resources */,
+				6A2E34F321B64069002E2344 /* Sign Up Title.png in Resources */,
+				6AB6320721B5DB2B00075BAA /* GoogleService-Info.plist in Resources */,
+				6A2E34D521B5EAC8002E2344 /* NF Messaging Login Background.jpg in Resources */,
+				6A2E34F721B6427A002E2344 /* Create Account Title.png in Resources */,
+				6A2E34D721B5ECDF002E2344 /* NF Messaging Title.png in Resources */,
+				6A2E34F921B64384002E2344 /* Forgot Password Title.png in Resources */,
+				6A2E34D321B5E8A7002E2344 /* Test Photo.jpg in Resources */,
+				6A2E34EF21B633E6002E2344 /* Cancel Icon.png in Resources */,
+				6A2E34F121B63FF2002E2344 /* Sign In Title.png in Resources */,
 				6AB631FF21B5D51100075BAA /* LaunchScreen.storyboard in Resources */,
+				6A2E34E121B610DB002E2344 /* NF Title.png in Resources */,
 				6AB631FC21B5D51100075BAA /* Assets.xcassets in Resources */,
+				6A2E34E521B61E63002E2344 /* Password Icon.png in Resources */,
 				6AB631FA21B5D50F00075BAA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39DA1FAFF6294C13784844CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NF Messaging/Pods-NF Messaging-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NF Messaging/Pods-NF Messaging-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBB703796FFC83ABE8893EB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NF Messaging-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6AB631ED21B5D50F00075BAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AB631F721B5D50F00075BAA /* ViewController.swift in Sources */,
 				6AB631F521B5D50F00075BAA /* AppDelegate.swift in Sources */,
+				6A2E34EB21B62E92002E2344 /* HomeScreen.swift in Sources */,
+				6A2E34E721B62E33002E2344 /* ForgotPasswordScreen.swift in Sources */,
+				6A2E34D021B5E180002E2344 /* LoginScreen.swift in Sources */,
+				6A2E34E921B62E54002E2344 /* CreatAccountScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +419,13 @@
 		};
 		6AB6320421B5D51100075BAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8816DE527EF73854B129F65E /* Pods-NF Messaging.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9S8P7XX49;
 				INFOPLIST_FILE = "NF Messaging/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,17 +433,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NolanFuchs.NF-Messaging";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		6AB6320521B5D51100075BAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6F5F932B6D3A8B556525CB4 /* Pods-NF Messaging.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9S8P7XX49;
 				INFOPLIST_FILE = "NF Messaging/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +453,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NolanFuchs.NF-Messaging";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
