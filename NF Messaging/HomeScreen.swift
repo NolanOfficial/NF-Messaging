@@ -9,11 +9,17 @@
 import UIKit
 import Firebase
 
+var docRef: DocumentReference?
+
 
 class HomeScreen: UIViewController {
 
     @IBOutlet weak var addMessageButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    
+
+    
+    
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -21,7 +27,7 @@ class HomeScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 
     @IBAction func logoutAction(_ sender: Any) {
@@ -30,6 +36,7 @@ class HomeScreen: UIViewController {
         do {
             try firebaseAuth.signOut()
             dismiss(animated: true, completion: nil)
+            print("Succesfully Logged Out")
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
@@ -37,6 +44,11 @@ class HomeScreen: UIViewController {
 
 
     @IBAction func addNewMessage(_ sender: Any) {
+        
+        
+        
+        
+        
     }
 
 }

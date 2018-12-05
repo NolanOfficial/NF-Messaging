@@ -14,15 +14,10 @@ class LoginScreen: UIViewController {
 
     // Labels and Views
     @IBOutlet weak var usernameText: SkyFloatingLabelTextFieldWithIcon!
-    
     @IBOutlet weak var passwordText: SkyFloatingLabelTextFieldWithIcon!
-    
     @IBOutlet weak var signInButton: UIButton!
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var errorMessage: UILabel!
-    
-    
     
     // MARK: program begins
     
