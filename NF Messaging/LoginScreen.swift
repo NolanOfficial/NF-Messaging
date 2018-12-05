@@ -32,13 +32,21 @@ class LoginScreen: UIViewController {
         passwordText.text = nil
         activityIndicator.isHidden = true
         errorMessage.isHidden = true
+        
+        // Check to see if user has previously been signed in
+        Auth.auth().addStateDidChangeListener {
+            auth, user in
+            if user != nil {
+                self.performSegue(withIdentifier: "goToHomeScreen", sender: nil)
+            } else {
+                return
+            }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-    
     
     // Actions/Functions
     
@@ -50,6 +58,7 @@ class LoginScreen: UIViewController {
         activityIndicator.startAnimating()
         errorMessage.isHidden = true
 
+        // Authenticating Login
         Auth.auth().signIn(withEmail: usernameText.text!, password: passwordText.text!) { (user, error) in
             if user != nil {
                 self.performSegue(withIdentifier: "goToHomeScreen", sender: self)
@@ -68,6 +77,7 @@ class LoginScreen: UIViewController {
         
     }
     
+    // Dismisses Keyboard on outside touch
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
