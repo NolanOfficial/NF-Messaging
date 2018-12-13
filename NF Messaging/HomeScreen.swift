@@ -17,9 +17,8 @@ class HomeScreen: UIViewController {
     @IBOutlet weak var addMessageButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
-
-    
-    
+    var user = Auth.auth().currentUser
+  
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

@@ -32,8 +32,6 @@ class CreatAccountScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
     @IBAction func createAccountAction(_ sender: Any) {
@@ -92,12 +90,8 @@ class CreatAccountScreen: UIViewController {
             self.accountMessage.textColor = .red
             self.accountMessage.isHidden = false
         }
-        
-        
-        
+    
     }
-    
-    
     
     @IBAction func exitAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -108,7 +102,5 @@ class CreatAccountScreen: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    
     
 }

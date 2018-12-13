@@ -12,9 +12,16 @@ import Firebase
 
 class Compose: UIViewController {
     
+    @IBOutlet weak var searchEngine: UISearchBar!
+    @IBOutlet weak var searchView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        searchEngine.resignFirstResponder()
     }
     
     @IBAction func backAction(_ sender: Any) {

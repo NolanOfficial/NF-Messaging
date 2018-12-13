@@ -133,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				6AB631F421B5D50F00075BAA /* AppDelegate.swift */,
+				6AB631F821B5D50F00075BAA /* Main.storyboard */,
 				6A2E34CF21B5E180002E2344 /* LoginScreen.swift */,
 				6A2E34E821B62E54002E2344 /* CreatAccountScreen.swift */,
 				6A2CE61921B75EB0004AC951 /* messageDetailCell.swift */,
@@ -140,7 +141,6 @@
 				6A2CE61D21B7CC2C004AC951 /* Compose.swift */,
 				6A2E34EA21B62E92002E2344 /* HomeScreen.swift */,
 				6A2E34E621B62E33002E2344 /* ForgotPasswordScreen.swift */,
-				6AB631F821B5D50F00075BAA /* Main.storyboard */,
 				6AB631FB21B5D51100075BAA /* Assets.xcassets */,
 				6AB631FD21B5D51100075BAA /* LaunchScreen.storyboard */,
 				6AB6320021B5D51100075BAA /* Info.plist */,

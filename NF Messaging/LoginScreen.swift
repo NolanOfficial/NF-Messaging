@@ -18,6 +18,7 @@ class LoginScreen: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var errorMessage: UILabel!
+
     
     // MARK: program begins
     
@@ -27,6 +28,7 @@ class LoginScreen: UIViewController {
         passwordText.text = nil
         activityIndicator.isHidden = true
         errorMessage.isHidden = true
+        
         
         // Check to see if user has previously been signed in
         Auth.auth().addStateDidChangeListener {
@@ -49,24 +51,34 @@ class LoginScreen: UIViewController {
         print("Attempting To Log In...")
         passwordText.resignFirstResponder()
         usernameText.resignFirstResponder()
+        signInButton.setTitle(" ", for: .normal)
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         errorMessage.isHidden = true
-
+        
         // Authenticating Login
-        Auth.auth().signIn(withEmail: usernameText.text!, password: passwordText.text!) { (user, error) in
+       
+       
+     
+        Auth.auth().signIn(withEmail: self.usernameText.text!, password: self.passwordText.text!) { (user, error) in
             if user != nil {
                 self.performSegue(withIdentifier: "goToHomeScreen", sender: self)
-               self.activityIndicator.stopAnimating()
-                self.activityIndicator.isHidden = true
-                print("Successfully Logged In!")
-            } else {
-                self.errorMessage.isHidden = false
                 self.activityIndicator.stopAnimating()
                 self.activityIndicator.isHidden = true
+                self.signInButton.setTitle("Sign In", for: .normal)
+                print("Successfully Logged In!")
+                print(Auth.auth().currentUser!.displayName!)
+            } else {
+                self.activityIndicator.stopAnimating()
+                self.activityIndicator.isHidden = true
+                self.errorMessage.isHidden = false
                 print(error!.localizedDescription)
+                self.signInButton.setTitle("Sign In", for: .normal)
+    
             }
         }
+         
+
         
         
         
@@ -76,12 +88,9 @@ class LoginScreen: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+   
     
     
-    
-    
-    
-    
-    
-
 }
+
+

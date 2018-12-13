@@ -11,12 +11,30 @@ import UIKit
 import Firebase
 
 
-class MessageDetail: UIViewController {
+class MessageDetail: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var senderTextField: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
+    
+    
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+    
+        
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+    
+       
+    
+    }
+    
+    
     
     
     @IBAction func backAction(_ sender: Any) {
