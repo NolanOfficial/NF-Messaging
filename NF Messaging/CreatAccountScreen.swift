@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SkyFloatingLabelTextField
 
-class CreatAccountScreen: UIViewController {
+class CreatAccountScreen: UIViewController, UITextFieldDelegate {
 
     // Labels and Views
     @IBOutlet weak var createAccountUsername: SkyFloatingLabelTextFieldWithIcon!
@@ -18,6 +18,7 @@ class CreatAccountScreen: UIViewController {
     @IBOutlet weak var createAccountPasswordRetype: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var accountMessage: UILabel!
+    @IBOutlet weak var createAccountButton: UIButton!
     
     var docRef: DocumentReference? = nil
     
@@ -28,10 +29,15 @@ class CreatAccountScreen: UIViewController {
         createAccountUsername.text = nil
         createAccountPassword.text = nil
         createAccountPasswordRetype.text = nil
+        disableButton()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createAccountUsername?.delegate = self
+        createAccountPassword?.delegate = self
+        createAccountPasswordRetype?.delegate = self
+        
     }
     
     @IBAction func createAccountAction(_ sender: Any) {
@@ -39,6 +45,7 @@ class CreatAccountScreen: UIViewController {
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         accountMessage.isHidden = true
+        createAccountButton.setTitle(" ", for: .normal)
         createAccountUsername.resignFirstResponder()
         createAccountPassword.resignFirstResponder()
         createAccountPasswordRetype.resignFirstResponder()
@@ -52,6 +59,7 @@ class CreatAccountScreen: UIViewController {
                     self.activityIndicator.isHidden = true
                     self.activityIndicator.stopAnimating()
                     self.accountMessage.isHidden = false
+                    self.createAccountButton.setTitle("Create Account", for: .normal)
                     self.accountMessage.text = "Account Created"
                     self.accountMessage.textColor = .green
                     self.accountMessage.isHidden = false
@@ -73,6 +81,7 @@ class CreatAccountScreen: UIViewController {
             } else {
                 self.activityIndicator.isHidden = true
                 self.activityIndicator.stopAnimating()
+                self.createAccountButton.setTitle("Create Account", for: .normal)
                 self.accountMessage.text = "Error. Please Try Again"
                 self.accountMessage.textColor = .red
                 self.accountMessage.isHidden = false
@@ -86,6 +95,7 @@ class CreatAccountScreen: UIViewController {
             print("Passwords Do Not Match")
             self.activityIndicator.isHidden = true
             self.activityIndicator.stopAnimating()
+            self.createAccountButton.setTitle("Create Account", for: .normal)
             self.accountMessage.text = "Passwords Do Not Match"
             self.accountMessage.textColor = .red
             self.accountMessage.isHidden = false
@@ -101,6 +111,44 @@ class CreatAccountScreen: UIViewController {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    // Checks to see if all fields are filled out
+    @IBAction func checksUsername(_ sender: Any) {
+        check()
+    }
+    @IBAction func checkPassword(_ sender: Any) {
+        check()
+    }
+    @IBAction func checksRetypePassword(_ sender: Any) {
+        check()
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        check()
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        check()
+    }
+    
+// Field Check Function
+    func check() {
+        if !(createAccountUsername.text?.isEmpty)! && !(createAccountPassword.text?.isEmpty)! && !(createAccountPasswordRetype.text?.isEmpty)! {
+            enableButton()
+        } else {
+            disableButton()
+        }
+    }
+    
+    
+    // Enable/Disable Create Account Button
+    func enableButton() {
+        createAccountButton.isEnabled = true
+        createAccountButton.alpha = 1.0
+    }
+    func disableButton() {
+        createAccountButton.isEnabled = false
+        createAccountButton.alpha = 0.5
     }
     
 }
