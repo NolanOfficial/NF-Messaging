@@ -15,14 +15,12 @@ class ForgotPasswordScreen: UIViewController, UITextFieldDelegate {
     // Labels and Buttons
     @IBOutlet weak var resetEmailText: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var emailSentLabel: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var resetButton: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         activityIndicator.isHidden = true
-        emailSentLabel.isHidden = true
         disableButton()
     }
     
@@ -39,7 +37,6 @@ class ForgotPasswordScreen: UIViewController, UITextFieldDelegate {
         resetEmailText.resignFirstResponder()
         activityIndicator.startAnimating()
         activityIndicator.isHidden = false
-        emailSentLabel.isHidden = true
         resetButton.setTitle(" ", for: .normal)
         
         Auth.auth().sendPasswordReset(withEmail: resetEmailText.text!) {
@@ -49,17 +46,13 @@ class ForgotPasswordScreen: UIViewController, UITextFieldDelegate {
                 self.activityIndicator.isHidden = true
                 self.activityIndicator.stopAnimating()
                 self.resetButton.setTitle("Reset", for: .normal)
-                self.emailSentLabel.text = "Email Doesn't Exist"
-                self.emailSentLabel.textColor = .red
-                self.emailSentLabel.isHidden = false
+               Alert.showBasicAlert(on: self, title: "Error", message: "Email Does Not Exist")
                             } else {
                 print("Email Sent...")
-                self.emailSentLabel.isHidden = false
                 self.activityIndicator.isHidden = true
                 self.activityIndicator.stopAnimating()
                  self.resetButton.setTitle("Reset", for: .normal)
-                self.emailSentLabel.text = "Email Sent"
-                self.emailSentLabel.textColor = .green
+                Alert.showBasicAlert(on: self, title: "Congratulations!", message: "Email Sent")
             }
         }
     }

@@ -17,14 +17,12 @@ class CreatAccountScreen: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var createAccountPassword: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var createAccountPasswordRetype: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var accountMessage: UILabel!
     @IBOutlet weak var createAccountButton: UIButton!
     
     var docRef: DocumentReference? = nil
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        accountMessage.isHidden = true
         activityIndicator.isHidden = true
         createAccountUsername.text = nil
         createAccountPassword.text = nil
@@ -44,7 +42,6 @@ class CreatAccountScreen: UIViewController, UITextFieldDelegate {
         print("Creating Account...")
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
-        accountMessage.isHidden = true
         createAccountButton.setTitle(" ", for: .normal)
         createAccountUsername.resignFirstResponder()
         createAccountPassword.resignFirstResponder()
@@ -58,11 +55,7 @@ class CreatAccountScreen: UIViewController, UITextFieldDelegate {
                     let db = Firestore.firestore().collection("Users").document(self.createAccountUsername.text!)
                     self.activityIndicator.isHidden = true
                     self.activityIndicator.stopAnimating()
-                    self.accountMessage.isHidden = false
                     self.createAccountButton.setTitle("Create Account", for: .normal)
-                    self.accountMessage.text = "Account Created"
-                    self.accountMessage.textColor = .green
-                    self.accountMessage.isHidden = false
                     self.performSegue(withIdentifier: "goToHomeScreen", sender: self)
                 
                 // Adding Email to Database
@@ -71,6 +64,7 @@ class CreatAccountScreen: UIViewController, UITextFieldDelegate {
                  ]){
                     err in
                             if let err = err {
+                                Alert.showBasicAlert(on: self, title: "Error", message: "Error adding document to database")
                                 print("Error adding document: \(err)")
                             } else {
                                 print("Email added to database")
@@ -79,12 +73,10 @@ class CreatAccountScreen: UIViewController, UITextFieldDelegate {
                 
                 // All fields are not filled correctly
             } else {
+                Alert.showBasicAlert(on: self, title: "Error", message: "All fields are not filled out correctly")
                 self.activityIndicator.isHidden = true
                 self.activityIndicator.stopAnimating()
                 self.createAccountButton.setTitle("Create Account", for: .normal)
-                self.accountMessage.text = "Error. Please Try Again"
-                self.accountMessage.textColor = .red
-                self.accountMessage.isHidden = false
                 print(error?.localizedDescription ?? "Fatal Error")
                 }
             
@@ -92,13 +84,12 @@ class CreatAccountScreen: UIViewController, UITextFieldDelegate {
         
             // Passwords Do Not Match
         } else {
+            Alert.showBasicAlert(on: self, title: "Error", message: "Passwords Do Not Match")
             print("Passwords Do Not Match")
             self.activityIndicator.isHidden = true
             self.activityIndicator.stopAnimating()
             self.createAccountButton.setTitle("Create Account", for: .normal)
-            self.accountMessage.text = "Passwords Do Not Match"
-            self.accountMessage.textColor = .red
-            self.accountMessage.isHidden = false
+        
         }
     
     }
@@ -107,7 +98,6 @@ class CreatAccountScreen: UIViewController, UITextFieldDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-   
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
