@@ -52,7 +52,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Username Icon.png"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -210,7 +210,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Username Icon.png"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -284,7 +284,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Password Icon.png"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
@@ -411,16 +411,6 @@
                                     <constraint firstAttribute="width" constant="212.33000000000001" id="EMI-rY-YTs"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Error. Please Try Again" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0f-I4-ahY">
-                                <rect key="frame" x="16" y="477" width="343" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="QHd-ly-In0"/>
-                                    <constraint firstAttribute="width" constant="343" id="Wn5-0L-NdG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Ka4-Df-4zE">
                                 <rect key="frame" x="169" y="388" width="37" height="37"/>
                                 <constraints>
@@ -441,11 +431,8 @@
                             <constraint firstItem="jES-Cf-Biz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="Rhj-JQ-QvP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LSE-RZ-PE1" secondAttribute="trailing" constant="16" id="U61-iF-qPI"/>
                             <constraint firstItem="9OT-Y3-xrh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Vct-ir-9mZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u0f-I4-ahY" secondAttribute="trailing" constant="16" id="XQE-W9-7gf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6O5-Ur-ldq" secondAttribute="trailing" constant="16" id="Zr8-5j-Wrv"/>
-                            <constraint firstItem="u0f-I4-ahY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zvq-Gg-jf4"/>
                             <constraint firstItem="LSE-RZ-PE1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="a9O-Vu-EGV"/>
-                            <constraint firstItem="u0f-I4-ahY" firstAttribute="top" secondItem="Ka4-Df-4zE" secondAttribute="bottom" constant="52" id="aha-7z-yDX"/>
                             <constraint firstItem="xGi-g7-uaX" firstAttribute="top" secondItem="yci-mn-yH3" secondAttribute="bottom" constant="8" id="byW-OS-s1d"/>
                             <constraint firstItem="Ka4-Df-4zE" firstAttribute="top" secondItem="xGi-g7-uaX" secondAttribute="bottom" constant="-81" id="dC6-Kd-Un1"/>
                             <constraint firstItem="LSE-RZ-PE1" firstAttribute="top" secondItem="jES-Cf-Biz" secondAttribute="bottom" constant="31" id="gtx-hm-aLW"/>
@@ -460,7 +447,6 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="Ka4-Df-4zE" id="ZTm-b5-545"/>
-                        <outlet property="errorMessage" destination="u0f-I4-ahY" id="DLa-2e-o7Q"/>
                         <outlet property="passwordText" destination="6O5-Ur-ldq" id="6eP-hL-q3m"/>
                         <outlet property="signInButton" destination="yci-mn-yH3" id="EWg-xI-tt4"/>
                         <outlet property="usernameText" destination="LSE-RZ-PE1" id="Sa1-ki-g6S"/>
@@ -513,7 +499,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Username Icon.png"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -590,7 +576,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Password Icon.png"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
@@ -666,7 +652,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Password Icon.png"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
@@ -1233,6 +1219,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3f3-Kt-E46"/>
-        <segue reference="8nb-S1-YLk"/>
+        <segue reference="DGZ-hf-Jah"/>
     </inferredMetricsTieBreakers>
 </document>

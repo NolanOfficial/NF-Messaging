@@ -140,6 +140,18 @@ class CreatAccountScreen: UIViewController, UITextFieldDelegate {
         }
     }
     
+    // First Responder Check
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.createAccountUsername {
+            createAccountPassword.becomeFirstResponder()
+        } else if textField == self.createAccountPassword {
+            createAccountPasswordRetype.becomeFirstResponder()
+        } else {
+            createAccountAction(self)
+        }
+        
+        return true
+    }
     
     // Enable/Disable Create Account Button
     func enableButton() {

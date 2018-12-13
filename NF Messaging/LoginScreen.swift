@@ -13,12 +13,11 @@ import SkyFloatingLabelTextField
 class LoginScreen: UIViewController, UITextFieldDelegate {
 
     // Labels and Views
+    
     @IBOutlet weak var usernameText: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var passwordText: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var errorMessage: UILabel!
-
     
     // MARK: program begins
     
@@ -27,14 +26,11 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         usernameText.text = nil
         passwordText.text = nil
         activityIndicator.isHidden = true
-        errorMessage.isHidden = true
+       
         disableButton()
-  
-        
-        
-        
         
         // Check to see if user has previously been signed in
+        
         Auth.auth().addStateDidChangeListener {
             auth, user in
             if user != nil {
@@ -49,7 +45,9 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         usernameText?.delegate = self
         passwordText?.delegate = self
-        disableButton()
+        
+        
+        
         
     }
     
@@ -62,10 +60,11 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         signInButton.setTitle(" ", for: .normal)
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
-        errorMessage.isHidden = true
+        
+        
         
         // Authenticating Login
-
+        
         Auth.auth().signIn(withEmail: self.usernameText.text!, password: self.passwordText.text!) { (user, error) in
             if user != nil {
                 self.performSegue(withIdentifier: "goToHomeScreen", sender: self)
@@ -75,28 +74,36 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
                 print("Successfully Logged In!")
                 print(Auth.auth().currentUser!.displayName!)
             } else {
+                Alert.showBasicAlert(on: self, title: "Error", message: "Username or Password is incorrect")
                 self.activityIndicator.stopAnimating()
                 self.activityIndicator.isHidden = true
-                self.errorMessage.isHidden = false
                 print(error!.localizedDescription)
                 self.signInButton.setTitle("Sign In", for: .normal)
-    
+                
             }
         }
-         
-
-        
-        
-        
     }
     
     // Dismisses Keyboard on outside touch
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
+    // First Responder Check
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.usernameText {
+            passwordText.becomeFirstResponder()
+        } else {
+            signInAction(self)
+        }
+        return true
+    }
+    
 
     // Checking if all fields are filled out to enable button
+    
     @IBAction func usernameCheck(_ sender: Any) {
         if (!usernameText.text!.isEmpty) && (!passwordText.text!.isEmpty) {
             enableButton()
@@ -126,9 +133,8 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         }
     }
 
-    
-
    // Enable/Disable Login Button
+    
     func disableButton() {
         signInButton?.alpha = 0.5
         signInButton?.isUserInteractionEnabled = false
@@ -138,7 +144,4 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         signInButton?.isUserInteractionEnabled = true
     }
     
-    
 }
-
-

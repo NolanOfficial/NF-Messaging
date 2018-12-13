@@ -24,7 +24,6 @@ class ForgotPasswordScreen: UIViewController, UITextFieldDelegate {
         activityIndicator.isHidden = true
         emailSentLabel.isHidden = true
         disableButton()
-        
     }
     
     override func viewDidLoad() {
@@ -34,8 +33,6 @@ class ForgotPasswordScreen: UIViewController, UITextFieldDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        
     }
     
     @IBAction func resetAction(_ sender: Any) {
@@ -63,13 +60,9 @@ class ForgotPasswordScreen: UIViewController, UITextFieldDelegate {
                  self.resetButton.setTitle("Reset", for: .normal)
                 self.emailSentLabel.text = "Email Sent"
                 self.emailSentLabel.textColor = .green
-               
             }
-       
         }
     }
-    
-    
     
     @IBAction func exitAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -79,8 +72,17 @@ class ForgotPasswordScreen: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
+    // First Responder Check
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.resetEmailText {
+            resetAction(self)
+        }
+        return true
+    }
     
     // Checks to see if all fields are filled out
+    
     @IBAction func emailCheck(_ sender: Any) {
         if (!(resetEmailText.text?.isEmpty)!) {
             enableButton()
@@ -88,6 +90,7 @@ class ForgotPasswordScreen: UIViewController, UITextFieldDelegate {
             disableButton()
         }
     }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if (!(resetEmailText.text?.isEmpty)!) {
             enableButton()
@@ -95,6 +98,7 @@ class ForgotPasswordScreen: UIViewController, UITextFieldDelegate {
             disableButton()
         }
     }
+    
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         if (!(resetEmailText.text?.isEmpty)!) {
             enableButton()
@@ -103,8 +107,8 @@ class ForgotPasswordScreen: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
     // Enable/Disable Reset Button
+    
     func enableButton() {
         resetButton.isEnabled = true
         resetButton.alpha = 1.0
@@ -113,7 +117,5 @@ class ForgotPasswordScreen: UIViewController, UITextFieldDelegate {
         resetButton.isEnabled = false
         resetButton.alpha = 0.5
     }
-    
-    
     
 }
