@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SkyFloatingLabelTextField
 
-class LoginScreen: UIViewController {
+class LoginScreen: UIViewController, UITextFieldDelegate {
 
     // Labels and Views
     @IBOutlet weak var usernameText: SkyFloatingLabelTextFieldWithIcon!
@@ -28,6 +28,10 @@ class LoginScreen: UIViewController {
         passwordText.text = nil
         activityIndicator.isHidden = true
         errorMessage.isHidden = true
+        disableButton()
+  
+        
+        
         
         
         // Check to see if user has previously been signed in
@@ -43,6 +47,10 @@ class LoginScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameText?.delegate = self
+        passwordText?.delegate = self
+        disableButton()
+        
     }
     
     // Actions/Functions
@@ -57,9 +65,7 @@ class LoginScreen: UIViewController {
         errorMessage.isHidden = true
         
         // Authenticating Login
-       
-       
-     
+
         Auth.auth().signIn(withEmail: self.usernameText.text!, password: self.passwordText.text!) { (user, error) in
             if user != nil {
                 self.performSegue(withIdentifier: "goToHomeScreen", sender: self)
@@ -88,7 +94,49 @@ class LoginScreen: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-   
+    
+
+    // Checking if all fields are filled out to enable button
+    @IBAction func usernameCheck(_ sender: Any) {
+        if (!usernameText.text!.isEmpty) && (!passwordText.text!.isEmpty) {
+            enableButton()
+        } else {
+            disableButton()
+        }
+    }
+    @IBAction func passwordCheck(_ sender: Any) {
+        if (!usernameText.text!.isEmpty) && (!passwordText.text!.isEmpty) {
+            enableButton()
+        } else {
+            disableButton()
+        }
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if (!usernameText.text!.isEmpty) && (!passwordText.text!.isEmpty) {
+            enableButton()
+        } else {
+            disableButton()
+        }
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if (!usernameText.text!.isEmpty) && (!passwordText.text!.isEmpty) {
+            enableButton()
+        } else {
+            disableButton()
+        }
+    }
+
+    
+
+   // Enable/Disable Login Button
+    func disableButton() {
+        signInButton?.alpha = 0.5
+        signInButton?.isUserInteractionEnabled = false
+    }
+    func enableButton() {
+        signInButton?.alpha = 1.0
+        signInButton?.isUserInteractionEnabled = true
+    }
     
     
 }

@@ -25,6 +25,7 @@
 		6A2E34F321B64069002E2344 /* Sign Up Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E34F221B64069002E2344 /* Sign Up Title.png */; };
 		6A2E34F721B6427A002E2344 /* Create Account Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E34F621B64279002E2344 /* Create Account Title.png */; };
 		6A2E34F921B64384002E2344 /* Forgot Password Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E34F821B64384002E2344 /* Forgot Password Title.png */; };
+		6A31A23321C1D9B20065EAF8 /* App Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A31A23221C1D9B20065EAF8 /* App Icon.png */; };
 		6AB631F521B5D50F00075BAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB631F421B5D50F00075BAA /* AppDelegate.swift */; };
 		6AB631FA21B5D50F00075BAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB631F821B5D50F00075BAA /* Main.storyboard */; };
 		6AB631FC21B5D51100075BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB631FB21B5D51100075BAA /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		6A2E34F221B64069002E2344 /* Sign Up Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sign Up Title.png"; sourceTree = "<group>"; };
 		6A2E34F621B64279002E2344 /* Create Account Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Create Account Title.png"; path = "../../../Create Account Title.png"; sourceTree = "<group>"; };
 		6A2E34F821B64384002E2344 /* Forgot Password Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Forgot Password Title.png"; sourceTree = "<group>"; };
+		6A31A23221C1D9B20065EAF8 /* App Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App Icon.png"; sourceTree = "<group>"; };
 		6AB631F121B5D50F00075BAA /* NF Messaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NF Messaging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB631F421B5D50F00075BAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AB631F921B5D50F00075BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		6A2E34D121B5E89E002E2344 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				6A31A23221C1D9B20065EAF8 /* App Icon.png */,
 				6A2E34EE21B633E6002E2344 /* Cancel Icon.png */,
 				6A2E34F621B64279002E2344 /* Create Account Title.png */,
 				6A2E34F221B64069002E2344 /* Sign Up Title.png */,
@@ -220,6 +223,7 @@
 				6A2E34F921B64384002E2344 /* Forgot Password Title.png in Resources */,
 				6A2E34D321B5E8A7002E2344 /* Test Photo.jpg in Resources */,
 				6A2E34EF21B633E6002E2344 /* Cancel Icon.png in Resources */,
+				6A31A23321C1D9B20065EAF8 /* App Icon.png in Resources */,
 				6A2E34F121B63FF2002E2344 /* Sign In Title.png in Resources */,
 				6AB631FF21B5D51100075BAA /* LaunchScreen.storyboard in Resources */,
 				6A2E34E121B610DB002E2344 /* NF Title.png in Resources */,

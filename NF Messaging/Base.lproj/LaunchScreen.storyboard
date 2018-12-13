@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NF Title.png" translatesAutoresizingMaskIntoConstraints="NO" id="31q-Xi-hTa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="31q-Xi-hTa">
                                 <rect key="frame" x="93" y="283" width="188" height="100"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.042293116885626404" green="0.078199728039688027" blue="0.14895304568527923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="31q-Xi-hTa" secondAttribute="bottom" constant="284" id="38O-iP-0sZ"/>
                             <constraint firstItem="31q-Xi-hTa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="93" id="VMA-Tc-T7z"/>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NF Title.png" width="525" height="375"/>
+        <image name="App Icon.png" width="3120" height="2771"/>
     </resources>
 </document>
