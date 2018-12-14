@@ -72,7 +72,6 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
                 self.activityIndicator.isHidden = true
                 self.signInButton.setTitle("Sign In", for: .normal)
                 print("Successfully Logged In!")
-                print(Auth.auth().currentUser!.displayName!)
             } else {
                 Alert.showBasicAlert(on: self, title: "Error", message: "Username or Password is incorrect")
                 self.activityIndicator.stopAnimating()

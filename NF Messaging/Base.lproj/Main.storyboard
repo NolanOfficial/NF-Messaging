@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NF Messaging Login Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2Uj-GW-ORE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="App Background Update.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="2Uj-GW-ORE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -184,7 +184,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NF Messaging Login Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vuI-ba-FpE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="App Background Update.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="vuI-ba-FpE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -375,13 +375,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="9OT-Y3-xrh">
                                 <rect key="frame" x="81.000000000000014" y="749" width="212.33333333333337" height="29"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1Z-ab-fTF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1Z-ab-fTF">
                                         <rect key="frame" x="0.0" y="0.0" width="151.33333333333334" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bN-ot-cW3">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bN-ot-cW3">
                                         <rect key="frame" x="157.33333333333334" y="0.0" width="55" height="29"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                         <state key="normal" title="Sign Up">
@@ -451,7 +451,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="NF Messaging Login Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aYu-vi-qmv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App Background Update.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="aYu-vi-qmv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxS-M8-b4t">
@@ -743,11 +743,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="aYu-vi-qmv" firstAttribute="leading" secondItem="X1R-5u-djR" secondAttribute="leading" id="5hU-B1-kAc"/>
                             <constraint firstItem="E5M-bK-SQT" firstAttribute="leading" secondItem="l3X-h7-CFS" secondAttribute="leading" constant="169" id="6fv-sH-b2R"/>
                             <constraint firstItem="OTh-HT-LxH" firstAttribute="leading" secondItem="l3X-h7-CFS" secondAttribute="leading" constant="16" id="9bu-1X-YDK"/>
                             <constraint firstItem="UxS-M8-b4t" firstAttribute="leading" secondItem="l3X-h7-CFS" secondAttribute="leading" constant="16" id="A1N-L7-gS5"/>
                             <constraint firstItem="L1U-RI-TXu" firstAttribute="top" secondItem="6lt-au-tB4" secondAttribute="bottom" constant="8" id="CZC-Mm-GKP"/>
                             <constraint firstItem="6lt-au-tB4" firstAttribute="top" secondItem="u7k-XP-rS0" secondAttribute="bottom" constant="8" id="EQ3-g0-395"/>
+                            <constraint firstItem="aYu-vi-qmv" firstAttribute="centerY" secondItem="OTh-HT-LxH" secondAttribute="centerY" id="Ed8-Wn-Iju"/>
                             <constraint firstItem="u7k-XP-rS0" firstAttribute="leading" secondItem="UxS-M8-b4t" secondAttribute="trailing" constant="21" id="El1-CZ-F4l"/>
                             <constraint firstItem="QZC-qK-bhJ" firstAttribute="top" secondItem="OTh-HT-LxH" secondAttribute="bottom" constant="71" id="GCl-4K-tGg"/>
                             <constraint firstItem="l3X-h7-CFS" firstAttribute="trailing" secondItem="IwH-YB-FdY" secondAttribute="trailing" constant="16" id="HWY-w6-qeR"/>
@@ -759,6 +761,7 @@
                             <constraint firstItem="u7k-XP-rS0" firstAttribute="top" secondItem="l3X-h7-CFS" secondAttribute="top" constant="16" id="VKh-SU-a9N"/>
                             <constraint firstItem="l3X-h7-CFS" firstAttribute="trailing" secondItem="u7k-XP-rS0" secondAttribute="trailing" constant="68" id="X55-ym-UyC"/>
                             <constraint firstItem="IwH-YB-FdY" firstAttribute="top" secondItem="L1U-RI-TXu" secondAttribute="bottom" constant="8" id="Xde-8n-yXr"/>
+                            <constraint firstItem="aYu-vi-qmv" firstAttribute="top" secondItem="X1R-5u-djR" secondAttribute="top" id="YHD-TR-A9V"/>
                             <constraint firstItem="l3X-h7-CFS" firstAttribute="trailing" secondItem="OTh-HT-LxH" secondAttribute="trailing" constant="16" id="ZFn-jf-967"/>
                             <constraint firstItem="l3X-h7-CFS" firstAttribute="trailing" secondItem="E5M-bK-SQT" secondAttribute="trailing" constant="169" id="aWP-mf-SQs"/>
                             <constraint firstItem="L1U-RI-TXu" firstAttribute="leading" secondItem="l3X-h7-CFS" secondAttribute="leading" constant="16" id="aij-0z-3mP"/>
@@ -1181,16 +1184,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="App Background Update.jpeg" width="1080" height="1919"/>
         <image name="Cancel Icon.png" width="192" height="192"/>
         <image name="Create Account Title.png" width="721" height="481"/>
         <image name="Forgot Password Title.png" width="800" height="600"/>
-        <image name="NF Messaging Login Background.jpg" width="1440" height="2560"/>
         <image name="NF Title.png" width="525" height="375"/>
         <image name="Password Icon.png" width="848" height="980"/>
         <image name="Username Icon.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3f3-Kt-E46"/>
-        <segue reference="DGZ-hf-Jah"/>
+        <segue reference="8nb-S1-YLk"/>
     </inferredMetricsTieBreakers>
 </document>

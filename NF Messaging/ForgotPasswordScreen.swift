@@ -46,13 +46,14 @@ class ForgotPasswordScreen: UIViewController, UITextFieldDelegate {
                 self.activityIndicator.isHidden = true
                 self.activityIndicator.stopAnimating()
                 self.resetButton.setTitle("Reset", for: .normal)
-               Alert.showBasicAlert(on: self, title: "Error", message: "Email Does Not Exist")
+                Alert.showBasicAlert(on: self, title: "Error", message: "Email Does Not Exist")
+               
                             } else {
                 print("Email Sent...")
                 self.activityIndicator.isHidden = true
                 self.activityIndicator.stopAnimating()
-                 self.resetButton.setTitle("Reset", for: .normal)
-                Alert.showBasicAlert(on: self, title: "Congratulations!", message: "Email Sent")
+                self.resetButton.setTitle("Reset", for: .normal)
+                Alert.showSuccessAlert(on: self, title: "Success!", message: "Email has been sent")
             }
         }
     }
